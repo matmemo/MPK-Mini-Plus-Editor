@@ -96,13 +96,13 @@ class UiMainWindow(QtWidgets.QMainWindow):
             msg = QMessageBox()
             msg.setWindowTitle(_translate('popup', 'MPK Mini Plus Editor'))
             msg.setText(_translate('popup', 'Controller not found'))
-            msg.setIcon(QMessageBox.Warning)
-            msg.setStandardButtons(QMessageBox.Retry | QMessageBox.Close)
-            msg.setDefaultButton(QMessageBox.Retry)
+            msg.setIcon(QMessageBox.Icon.Warning)
+            msg.setStandardButtons(QMessageBox.StandardButton.Retry | QMessageBox.StandardButton.Close)
+            msg.setDefaultButton(QMessageBox.StandardButton.Retry)
 
             ret = msg.exec()
 
-            if ret == QMessageBox.Close:
+            if ret == QMessageBox.StandardButton.Close:
                 sys.exit()
             else:
                 self.midi = AkaiMPKPlus()
