@@ -1,2 +1,2 @@
-python-rtmidi
-PyQt6
+PyQt6~=6.10.0
+python-rtmidi~=1.5.8
